@@ -2,8 +2,6 @@ const path = require('path');
 const express = require('express');
 const app = express();
 require('dotenv').config();
-const cors = require('cors');
-app.use(cors());
 
 // Run the app by serving the static files
 // in the dist directory
