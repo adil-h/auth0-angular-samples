@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { tokenNotExpired } from 'angular2-jwt';
 import { AUTH_CONFIG } from './auth0-variables';
+import { AppConfig } from './../app.config';
 
 // Avoid name not found warnings
 declare var Auth0Lock: any;
@@ -8,17 +9,20 @@ declare var Auth0Lock: any;
 @Injectable()
 export class AuthService {
 
-  lock = new Auth0Lock(AUTH_CONFIG.clientID, AUTH_CONFIG.domain, {
-    oidcConformant: true,
-    autoclose: true,
-    auth: {
-      redirectUri: AUTH_CONFIG.callbackURL,
-      responseType: 'token id_token',
-      audience: `https://${AUTH_CONFIG.domain}/userinfo`
-    }
-  });
+  lock;
 
-  constructor() {}
+  constructor(config: AppConfig) {
+    const { AUTH0_CLIENT_ID, AUTH0_DOMAIN } = config.config;
+    this.lock = new Auth0Lock(AUTH0_CLIENT_ID, AUTH0_DOMAIN, {
+      oidcConformant: true,
+      autoclose: true,
+      auth: {
+        redirectUri: window.location.href,
+        responseType: 'token id_token',
+        audience: `https://${AUTH0_DOMAIN}/userinfo`
+      }
+    });
+  }
 
   public login(): void {
     this.lock.show();
