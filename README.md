@@ -1,6 +1,6 @@
 # Auth0 Angular Login
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://github.com/chenkie/auth0-angular-samples/tree/master&env[AUTH0_CLIENT_ID]=GzM1W0ySZe5gSAYg37717ZvESr1aCXCu&env[AUTH0_DOMAIN]=blogtest.auth0.com)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/chenkie/auth0-angular-samples/tree/master&env[AUTH0_CLIENT_ID]=GzM1W0ySZe5gSAYg37717ZvESr1aCXCu&env[AUTH0_DOMAIN]=blogtest.auth0.com)
 
 
 This sample demonstrates how to add authentication to an Angular application using Auth0's Lock widget. The sample uses the Angular CLI.
