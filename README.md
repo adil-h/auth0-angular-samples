@@ -1,10 +1,32 @@
-# Auth0 Angular Samples
+# Auth0 Angular Login
 
-These samples demonstrate how to add authentication to an Angular application with Auth0. Each folder contains a distinct application so that various Auth0 features can be viewed in isolation.
+This sample demonstrates how to add authentication to an Angular application using Auth0's Lock widget. The sample uses the Angular CLI.
 
-The samples show how to integrate Auth0 using [Auth0Lock](https://github.com/auth0/lock) >= 10.9.0 and [auth0.js](https://github.com/auth0/auth0.js) >= 8.0.0.
+## Getting Started
 
-> Note: If you are receiving `Unsupported response type: id_token token` errors when using these samples please make sure that your account has been updated to support the new API Authorization flows. For details please see: [Configure your tenant for the new API Authorization flows](https://auth0.com/docs/api-auth/tutorials/configuring-tenant-for-api-auth)
+If you haven't already done so, [sign up](https://auth0.com) for your free Auth0 account and create a new client in the [dashboard](https://manage.auth0.com). Find the **domain** and **client ID** from the settings area and add the URL for your application to the **Allowed Callback URLs** box. If you are using the server provided by the Angular CLI, that URL is `http://localhost:4200`.
+
+Clone the repo or download it from the Angular quickstart page in Auth0's documentation. Install the Angular CLI and the dependencies for the app.
+
+```bash
+npm install -g angular-cli
+cd 01-Login
+npm install
+```
+
+## Set the Client ID and Domain
+
+If you download the sample from the quickstart page, it will come pre-populated with the **client ID** and **domain** for your application. If you clone the repo directly from Github, rename the `auth0-variables.ts.example` file to `auth0-variables.ts` and provide the **client ID** and **domain** there. This file is located in `src/app/auth/`.
+
+## Run the Application
+
+The development server that comes with the Angular CLI can be used to serve the application.
+
+```bash
+npm start
+```
+
+The application will be served at `http://localhost:4200`.
 
 ## What is Auth0?
 
@@ -33,3 +55,5 @@ If you have found a bug or if you have a feature request, please report them at 
 ## License
 
 This project is licensed under the MIT license. See the [LICENSE](LICENSE.txt) file for more info.
+
+
